@@ -111,14 +111,14 @@ export default function Posts({ data, avatar }: Props): ReactElement {
                 alt="avatar"
                 className="w-12 h-12 rounded-full"
               />
-              <div className="flex flex-col items-center justify-center">
+              <div className="flex flex-col justify-center">
                 <h5 className="font-semibold text-blue-800">{post.username}</h5>
                 <small className="font-medium text-gray-500">
-                  {format(new Date(post.created), "dd MM yyyy hh:mm")}
+                  {format(new Date(post.created), "dd MMM yyyy p")}
                 </small>
               </div>
             </div>
-            <p className="text-lg text-gray-700">{post.content}</p>
+            <p className="text-lg text-justify text-gray-700">{post.content}</p>
           </div>
         ))}
         <p className="mt-8 font-semibold text-gray-400">- End of the post -</p>
