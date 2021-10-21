@@ -5,7 +5,7 @@ import { format } from "date-fns";
 import { useRouter } from "next/router";
 import useLocalStorage from "../hooks/useLocalStorage";
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
   const response = await axios.get(
     "https://my-app.farhanlmntrix.workers.dev/posts"
   );
